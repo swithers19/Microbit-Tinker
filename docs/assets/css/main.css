@@ -1,5 +1,11 @@
 @import url(fontawesome-all.min.css);
 
+
+
+.cstm {
+	opacity: 0.7;
+}
+
 /*
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -2574,7 +2580,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 30%;
 		}
 
 			.image.left img, .image.right img {
