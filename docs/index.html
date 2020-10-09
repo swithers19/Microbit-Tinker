@@ -25,8 +25,8 @@
 							<li><a href="#home">Home</a></li>
 							<li><a href="#what-are-embedded-systems">Embedded System?</a></li>
 							<li><a href="#microbits">Welcome to Microbits</a></li>
-							<li><a href="#intro">Built-in Sensors</a></li>
-							<li><a href="#one">Display</a></li>
+							<li><a href="#plug-and-play">Plug and Play</a></li>
+							<li><a href="#one">Connecting to the World</a></li>
 							<li><a href="#one">Music</a></li>
 							<li><a href="#three">Bring it Together</a></li>
 							<li><a href="#two">Stretch Goals - Communication</a></li>
@@ -52,15 +52,13 @@
 					</section>
 
 				<!-- What is an embedded system -->
-				<section id="what-are-embedded-systems" class="wrapper style1-alt fade-up"> 
+				<section id="what-are-embedded-systems" class="wrapper style2 fade-up"> 
 					<div class="inner">
 						<h2>Embedded System? Sounds Scary/Boring.</h2>
 						<p>Embedded systems are a complete computer system that perform certain things within a bigger system (mechanical or electronic). 
 							Essentially, its a bunch of code run on a special type of computer which can interact with the world and do some pretty cool stuff.</p>				
 					</div>
 				</section>
-
-
 				<section class="wrapper style2 spotlights"> 
 					<section>
 						<iframe opacity="0.8" class="image cstm" src="https://www.youtube.com/embed/kHBcVlqpvZ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>						
@@ -94,101 +92,92 @@
 					</section>
 				</section>
 
-				<!-- One -->
-					<section id="microbits" class="wrapper style3 spotlights">
+				<!-- What are microbits -->
+				<section id="microbits" class="wrapper style1 spotlights">
+					<div class="inner">
+						<h2>Welcome to Microbits</h2>
+						<div class="row">
+							<div class="col-sm-8">
+								<p>Microbits are the fun little device which can be seen to the right which are an embedded system in one tiny little form factor! 
+									It packs a processor, some buttons and sensors (inputs) and a pretty neat LED grid (output).
+									It also has digital and analog IO, which means we can program it to control things based on how we provide or read electricity from the labelled pads.<br>
+								</p>
+								<a href="https://python.microbit.org/v/2.0" class="button primary fit">To the editor!  <i class="fas fa-laptop-code"></i></a>
 
-								<div class="inner">
-									<h2>Welcome to Microbits</h2>
-									<div class="row">
-										<div class="col-sm-8">
-											<p>Microbits are the fun little device which can be seen to the right which are an embedded system in one tiny little form factor! 
-												It packs a processor, some buttons and sensors (inputs) and a pretty neat LED grid (output).
-												It also has digital and analog IO, which means we can program it to control things based on how we provide or read electricity from the labelled pads.<br>
-											</p>
-											<a href="https://python.microbit.org/v/2.0" class="button primary fit">To the editor!  <i class="fas fa-laptop-code"></i></a>
-
-										</div>
-										<div class="col-sm-4">
-											<span  class="image fit"><img src="images/microbit-drawing.svg" alt="Microbit development board front"></span>
-										</div>
-									</div>
-								
-									<div class="row">
-										<div class="col-md-6">
-										</div>
-										<div class="col-md-6 order-1">
-
-										</div>
-									</div>
-								
-								</div>
-						<section>
-							<div class="content">
-								<div class="inner">
-									<h2>Feugiat consequat</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
 							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Ultricies aliquam</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
+							<div class="col-sm-4">
+								<span  class="image fit"><img src="images/microbit-drawing.svg" alt="Microbit development board front"></span>
 							</div>
-						</section>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+						</div>
+						<div class="row">
+							<p>The microbit can be program in Python which you are familiar with. The link above takes you to an editor which has a bit going on, so below is a little explanation of what is going on. Don't hesitate to start try uploading code and changing things, nothing will blow up... I hope.</p>
+						</div>				
+						<div class="row">
 							<div class="features">
 								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/connect.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Connect</h3>
+										</div>
+									</div>
+									<p>First thing we need to do is connect to the Microbit. This will allow us to send commands either through flashing our code or through the serial.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/load-save.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Load/Save Code</h3>
+										</div>
+									</div>
+									<p>Given flashing code converts our code into different form, it is ideal to store or code somewhere. This allows you to upload or download your code.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/flash.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Flash</h3>
+										</div>
+									</div>
+									<p>We can't simply <i>"run"</i> our code, we need to flash it onto the microbit. This compiles our code into a form the Microbit can handle and run for as long as we want it to.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/open-serial.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Open Serial</h3>
+										</div>
+									</div>
+									<p>So you are curious about what running the command <i>speech.sing()</i> will do, you can test it out through the serial! This is like the python command line in which you can run one off commands, but on the microbit.</p>
 								</section>
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
 						</div>
-					</section>
+					
+					</div>
+				</section>
+
+				<!-- Plug and play -->
+				<section id="plug-and-play" class="wrapper style1-alt fade-up">
+					<div class="inner">
+						<h2>Program #1</h2>
+						<div class="row">
+							<div class="col-sm-6">
+								<p>Hellooo</p>
+							</div>
+							<div class="col-sm-6">
+								<script src="https://gist.github.com/swithers19/fb667a6aa3d38f2bb945fd3d0aa4f0d3.js"></script>		
+							</div>
+						</div>
+					</div>
+				</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
