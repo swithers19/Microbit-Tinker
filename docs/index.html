@@ -29,9 +29,6 @@
 							<li><a href="#plug-and-play">Plug and Play</a></li>
 							<li><a href="#ready-to-go">What's Ready to Go</a></li>
 							<li><a href="#bring-it-together">Bring it Together</a></li>
-							<li><a href="#what-can-i-connect">What Can I Connect</a></li>
-							<li><a href="#three">What Next?</a></li>
-
 						</ul>
 					</nav>
 				</div>
@@ -77,7 +74,7 @@
 							<div class="inner">
 									<h3>Ventilators</h3>
 									<p>Medical devices such as pacemakers, ventilators and anything with "smarts" processes vitals and determines what must be delivered to a patient.
-										Due to that rather signifigant 2020 event, Medtronic have released the source code and drawings which can be found here.</p>
+										Due to that rather signifigant 2020 event, Medtronic have released the source code and drawings which can be found <a href="https://github.com/jawher-Mansour/MedTronic-Ventilator">here</a>.</p>
 							</div>
 						<div>
 					</section>
@@ -184,8 +181,8 @@
 							<iframe src="https://giphy.com/embed/j93DaHO9Uq9q0" style="position: relative; height: 40vh; width: 100%; padding-bottom: 20px;" frameBorder="0" ></iframe>
 							<p>The microbit comes with a bunch of packages which makes our lives easier. One of them is called <code>display</code> which comes with some simple interfaces to display things on the LED array. One of those things is printing 
 								text which scrolls across the screen with <code>display.scroll()</code>, the other providing the ability to display images with <code>display.show()</code>. We will touch on these in more detail in no time at all!</p>
-							<p>Given everything runs in a repeating loop, we need to consider timing of things. If I were to turn a light on an off within the loop, it would appear as if the 
-								light was constantly on as evreything is happening so fast. <code>sleep()</code> helps break-up the code run above which would be a bit overwhelming if we were to run it constantly. Sleep runs on milliseconds, so the code above will sleep for 2 seconds. Try showing two images in a row without sleeping and see what happens.</p>
+							<p>Given everything runs in a repeating loop, we need to consider the timing of things. If I were to turn a light on an off within the loop, it would appear as if the 
+								light was constantly on as everything is happening so fast. <code>sleep()</code> helps break-up the code run above which would be a bit overwhelming if we were to run it constantly. Sleep runs on milliseconds, so the code above will sleep for 2 seconds. Try showing two images in a row without sleeping and see what happens.</p>
 						</div>
 
 					</div>
@@ -195,7 +192,7 @@
 				<section id="ready-to-go" class="wrapper style1 fade-up">
 					<div class="inner">
 						<h2>What Can Be Done</h2>
-						<p>The Microbit is stacked with functionality, there are countless options before you have even connect something to it. It can write, display images, generate music and speech, take motion commands (think Wii remotes), help you navigate old school style an even communicate between microbits using Radio! Nuts, I know.</p>
+						<p>The Microbit is stacked with functionality, there are countless options before you have even connected something to it. It can write, display images, generate music and speech, take motion commands (think Wii remotes), help you navigate old school style and even communicate between microbits using Radio! Nuts, I know.</p>
 						<p>Below is a simple outline of how we can use some of this functionality with links to the underlying documentation. Get hands on and see how these things interact!</p>
 						<div class="features">
 							<section>
@@ -221,45 +218,75 @@
 							</section>
 							<section class="left">
 								<a href="https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html"><code class="code-instructions">Accelerometer</code></a>
-								<p>Gestures and movement</p>
+								<p>The microbit comes packed with an accelerometer which allows us to detect the orientation of the Microbit. The orientation is 
+									represented by cartesian coordinates represented by x, y and z (think back to year 9 maths). We can read each axis value using
+									<code>accelerometer.get_x()</code>, subbing out x for the respective axes.</p>
+								<p>Microbit makes a super simple interface available to utilise the accelerometer. We can extract the current 'gesture' which is a 
+									predefined orientation of the microbit. The gesture can be extracted with <code>accelerometer.current_gesture()</code> and stored
+									in a variable. Check out the example code to see how we could use a gesture to perform a certain action.
+								</p>
 							</section>
 							<section class="right">
-								<script src="https://gist.github.com/swithers19/8e2491101e8a852dadfd28e1f36a3499.js"></script>
+								<script src="https://gist.github.com/swithers19/496919ee95cab1d4db5eebc24824683a.js"></script>
 							</section>
 							<section class="left">
-								<a href="https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html"><code class="code-instructions">Music</code></a>
-								<p></p>
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/io.html"><code class="code-instructions">Digital IO</code></a>
+								<p>Digital Input/Output(IO) provides a simple interface to connect external digital devices such as sensors or peripherals such as LEDs.
+									There are three digital IO pins labelled 0, 1 and 2 which can be programatically read and set. We can also check whether a pin is physically
+									touched using <code>pinX.is_touched()</code>.
+								</p>
+								<p>To output a voltage to a pin (turn on), <code>pinX.write_digital(1)</code> will do the trick, while
+									we can read a pin with <code>pinX.read_digital()</code>.</p>
 							</section>
 							<section class="right">
-								<script src="https://gist.github.com/swithers19/8e2491101e8a852dadfd28e1f36a3499.js"></script>
+								<script src="https://gist.github.com/swithers19/15af37506dd0f93f735e7ead6c1c8b11.js"></script>
 							</section>
 							<section class="left">
-								<a href="https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html"><code class="code-instructions">Digital IO</code></a>
-								<p>This is where we can start connecting things to do some pretty funky stuff</p>
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/radio.html"><code class="code-instructions">Radio</code></a>
+								<p>Radio allows microbits to talk to all their friends! It uses a super simple interface to send and recieve messages between microbits. 
+									You will need to <code>import radio</code> and run <code>radio.on()</code> before your loop but then your good to go. To send a message,
+									it is as simple as <code>radio.send(message)</code> and recieve it with <code>radio.receive()</code>. 
+								</p>
+								<p>We can specify the channel to communicate on walkie-talkie style so if you want to create your own secret messaging system go for it!</p>
 							</section>
 							<section class="right">
-								<script src="https://gist.github.com/swithers19/8e2491101e8a852dadfd28e1f36a3499.js"></script>
+								<script src="https://gist.github.com/swithers19/1e5fe5f8dacd25acad57f2f803ee5ab8.js"></script>
 							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/music.html"><code class="code-instructions">Music</code></a>
+								<p>We can generate music from the microbit which requires a simple connection to the stereo connector. We simply connect the 
+									ground to the of the cable and the pin connector as seen in the speaker connector diagram if we were to use pin 0.
+								</p>
+								<p>To actually play music once connected is very simple with <code>music.play()</code>You can use pre-built melodies or build your own.
+								There is a lot of functionality I haven't touched on,  <a href="https://microbit-micropython.readthedocs.io/en/latest/music.html">check out the documentation</a> 
+								if your interested in digging in!</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/a1d1cb865380aa654dc712cab36014c3.js"></script>								
+								<h4 id="speaker-txt">Speaker Connection</h4>
+								<img width="80%" src="images/music-pins.png" alt="">
+							</section>
+						
 						</div>
-					</div>
-				</section>
-
-				<!-- What Can I Connect -->
-				<section id="what-can-i-connect" class="wrapper style1-alt fade-up">
-					<div class="inner">
-						<h2>Connecting to the Microbit</h2>
 					</div>
 				</section>
 
 				<!-- Bring It Together -->
 				<section id="bring-it-together" class="wrapper style2 fade-up">
 					<div class="inner">
-						<h2>Connecting to the Microbit</h2>
+						<h2>Bring it Together</h2>
+						<p>We have done some hard yards exploring what the microbit can do, the last piece of content is helping you on your way on how to integrate this functionality.
+							Everything we have covered is fundamentally an input or output (except radio), meaning we are passing the microbit some information, or it is outputting something,
+							be it light, sound or information. A simple project wil fundamentally do the following:
+						</p>
+						<img width="100%" src="images/project.svg" alt="">
+						<p style="text-align: center;">Blend functionality, get experimental and don't be afraidd to break things!</p>
+						<iframe src="https://giphy.com/embed/3o7TKxlVXJsQsDX2og"  style="position: relative; height: 40vh; width: 100%; padding-bottom: 20px;" frameBorder="0" ></iframe>
 					</div>
 				</section>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
+			<footer id="footer" class="wrapper style1">
 				<div class="inner">
 					<ul class="menu">
 						<li>&copy; Sam Withers 2020</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Remixed by Sam Withers</li>
