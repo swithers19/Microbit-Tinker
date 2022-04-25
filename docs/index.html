@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/s-cstm.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#home">Home</a></li>
+							<li><a href="#what-are-embedded-systems">Embedded System?</a></li>
+							<li><a href="#microbits">Welcome to Microbits</a></li>
+							<li><a href="#plug-and-play">Plug and Play</a></li>
+							<li><a href="#ready-to-go">What's Ready to Go</a></li>
+							<li><a href="#bring-it-together">Bring it Together</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Home -->
+					<section id="home" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Messing with Microbits</h1>
+							<p>Code is used in more than just websites, we will look at some of the other ways you can use software to interact with the real world.<p>
+							<ul class="actions">
+								<li><a href="#what-are-embedded-systems" class="button scrolly">Embedded System?</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- What is an embedded system -->
+				<section id="what-are-embedded-systems" class="wrapper style2 fade-up"> 
+					<div class="inner">
+						<h2>Embedded System?</h2>
+						<p>Embedded systems are a complete computer system that perform certain things within a bigger system (mechanical or electronic). 
+							Essentially, its a bunch of code run on a special type of computer which can interact with the world and do some pretty cool stuff.</p>				
+					</div>
+				</section>
+				<section class="wrapper style2 spotlights"> 
+					<section>
+						<iframe opacity="0.8" class="image cstm" src="https://www.youtube.com/embed/7atZfX85nd4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+						<div class="content">
+							<div class="inner">
+								<h3>Spot (Boston Dynamics)</h3>
+								<p>The most exciting embedded/Mechatronic system are robots! Here is a personal favourite of Boston Dynamic's Spot.</p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<a opacity="0.8" href="https://github.com/jawher-Mansour/MedTronic-Ventilator" class="image cstm">
+							<img opacity="0.8" opacity="" src="images/medical-theatre.jpg" alt="shot of medical theatre with heart rate monitor in foreground"/>
+						</a>
+						<div class="content">
+							<div class="inner">
+									<h3>Medical Devices</h3>
+									<p>Medical devices such as pacemakers, ventilators and anything with "smarts" processes vitals and determines what must be delivered to a patient.
+										If you are interested in seeing what this code looks like, Medtronic have released the source code and drawings which can be found <a href="https://github.com/jawher-Mansour/MedTronic-Ventilator">here</a>.</p>
+							</div>
+						<div>
+					</section>
+					<section>
+						<a opacity="0.8" href="#" class="image cstm"><img src="images/parked-planes.jpg" alt="aerial shot of parked planes at airport" data-position="25% 25%" /></a>
+						<div class="content">
+							<div class="inner">
+									<h3>Planes, Trains and Automobiles</h3>
+									<p>Pretty much everything from your car to your washing machine has an embedded system. A challenge could be to find a home appliance that doesn't feature an embedded system.</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- What are microbits -->
+				<section id="microbits" class="wrapper style1 spotlights">
+					<div class="inner">
+						<h2>Welcome to Microbits</h2>
+						<div class="row">
+							<div class="col-sm-8">
+								<p>Microbits are the fun little device which can be seen to the right which are an embedded system in one tiny little form factor! 
+									It packs a processor, some buttons and sensors (inputs) and a pretty neat LED grid (output).
+									It also has digital and analog IO, which means we can program it to control things based on how we provide or read electricity from the labelled pads.<br>
+								</p>
+								<a href="https://python.microbit.org/v/2" class="button primary fit">To the editor!  <i class="fas fa-laptop-code"></i></a>
+
+							</div>
+							<div class="col-sm-4">
+								<span  class="image fit"><img src="images/microbit-drawing.svg" alt="Microbit development board front"></span>
+							</div>
+						</div>
+						<div class="row">
+							<p>The microbit can be program in Python which you are familiar with. The link above takes you to an editor which has a bit going on, so below is a little explanation of what is going on. Don't hesitate to start try uploading code and changing things, nothing will blow up... I hope.</p>
+						</div>				
+						<div class="row">
+							<div class="features">
+								<section>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/connect.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Connect</h3>
+										</div>
+									</div>
+									<p>First thing we need to do is connect to the Microbit. This will allow us to send commands either through flashing our code or through the serial.</p>
+								</section>
+								<section>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/load-save.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Load/Save Code</h3>
+										</div>
+									</div>
+									<p>Given flashing code converts our code into different form, it is ideal to store or code somewhere. This allows you to upload or download your code.</p>
+								</section>
+								<section>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/flash.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Flash</h3>
+										</div>
+									</div>
+									<p>We can't simply <i>"run"</i> our code, we need to flash it onto the microbit. This compiles our code into a form the Microbit can handle and run for as long as we want it to.</p>
+								</section>
+								<section>
+									<div class="row align-items-center">
+										<div class="col-3">
+											<img width="100%" height="80em" src="images/open-serial.svg" alt="">
+										</div>
+										<div class="col-9">
+											<h3	>Open Serial</h3>
+										</div>
+									</div>
+									<p>So you are curious about what running the command <i>speech.sing()</i> will do, you can test it out through the serial! This is like the python command line in which you can run one off commands, but on the microbit.</p>
+								</section>
+							</div>
+						</div>
+					
+					</div>
+				</section>
+
+				<!-- Plug and play -->
+				<section id="plug-and-play" class="wrapper style1-alt fade-up">
+					<div class="inner">
+						<h2>Program #1</h2>
+						<div class="row" style="padding-bottom: 20px;">
+							<div class="col-sm-6">
+									<p>The default code that is loaded up in the editor should look like something to the right/below. 
+										After looking at the code for a while, you will notice a few odd things about the code. Hint, how does the code 'stop'?</p>
+							</div>
+							<div class="col-sm-6">
+								<script src="https://gist.github.com/swithers19/fb667a6aa3d38f2bb945fd3d0aa4f0d3.js"></script>		
+							</div>
+						</div>
+						<div class="row">
+							<p>The first line <code>from microbit import *</code> imports the whole microbit module which 
+								provides us a bunch of simple ways of controlling the microbit. The next statement is <code> while True:</code> 
+								is something we typically never want to do, which is loop for enternity.In embedded systems, it is rare that we want the process the end, as such we run code in a infinite loop which can be written as achieved above!</p>
+							<iframe src="https://giphy.com/embed/j93DaHO9Uq9q0" style="position: relative; height: 40vh; width: 100%; padding-bottom: 20px;" frameBorder="0" ></iframe>
+							<p>The microbit comes with a bunch of packages which makes our lives easier. One of them is called <code>display</code> which comes with some simple interfaces to display things on the LED array. One of those things is printing 
+								text which scrolls across the screen with <code>display.scroll()</code>, the other providing the ability to display images with <code>display.show()</code>. We will touch on these in more detail in no time at all!</p>
+							<p>Given everything runs in a repeating loop, we need to consider the timing of things. If I were to turn a light on an off within the loop, it would appear as if the 
+								light was constantly on as everything is happening so fast. <code>sleep()</code> helps break-up the code run above which would be a bit overwhelming if we were to run it constantly. Sleep runs on milliseconds, so the code above will sleep for 2 seconds. Try showing two images in a row without sleeping and see what happens.</p>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- Ready to Go -->
+				<section id="ready-to-go" class="wrapper style1 fade-up">
+					<div class="inner">
+						<h2>What Can Be Done</h2>
+						<p>The Microbit is stacked with functionality, there are countless options before you have even connected something to it. It can write, display images, generate music and speech, take motion commands (think Wii remotes), help you navigate old school style and even communicate between microbits using Radio! Nuts, I know.</p>
+						<div class="row center"> 
+							<div class="col s10 text-center">
+								<img class="center" width="75%" src="images/microbit-features.webp" alt="">
+							</div>
+						</div>
+						<p style="padding-top: 2em;">Below is a simple outline of how we can use some of this functionality with links to the underlying documentation. Get hands on and see how these things interact!</p>
+						<div class="features">
+							<section>
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/display.html"><code class="code-instructions">Display</code></a>
+								<p>We are already familiar with the display, but it is a class written to make working with those 25 LEDs a little simpler. 
+									As we have previously explored we can <code>display.scroll()</code> which will print some text out.</p>
+								<p>We have also seen <code>display.show()</code> used to display a predefined image. It turns out we can also create and show our own. 
+									In the code example you can see <code>img_boat</code> defined with a bunch of numbers. They represent each row of the microbit LEDs, 
+									set with a value from 0-9 representing brightness. We then pass this variable to <code>display.show()</code>. Have a crack making your own!</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/37f3f7b122afaf54dd6935926551a9a7.js"></script>							
+							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/button.html"><code class="code-instructions">Buttons</code></a>
+								<p>Typically we will want to click a button to trigger some sort of event. We can do this using an if statement which checks 
+									the state of the button. <code>button_a.is_pressed()</code> checks if the button is currently pressed while there also 
+									functions for checking if it has been pressed and how many times.</p>
+									<p>All functionality is the same for button b in which you swap out the button reference.</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/8e2491101e8a852dadfd28e1f36a3499.js"></script>
+							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/accelerometer.html"><code class="code-instructions">Accelerometer</code></a>
+								<p>The microbit comes packed with an accelerometer which allows us to detect the orientation of the Microbit. The orientation is 
+									represented by cartesian coordinates represented by x, y and z (think back to year 9 maths). We can read each axis value using
+									<code>accelerometer.get_x()</code>, subbing out x for the respective axes.</p>
+								<p>Microbit makes a super simple interface available to utilise the accelerometer. We can extract the current 'gesture' which is a 
+									predefined orientation of the microbit. The gesture can be extracted with <code>accelerometer.current_gesture()</code> and stored
+									in a variable. Check out the example code to see how we could use a gesture to perform a certain action.
+								</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/496919ee95cab1d4db5eebc24824683a.js"></script>
+							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/io.html"><code class="code-instructions">Digital IO</code></a>
+								<p>Digital Input/Output(IO) provides a simple interface to connect external digital devices such as sensors or peripherals such as LEDs.
+									There are three digital IO pins labelled 0, 1 and 2 which can be programatically read and set. We can also check whether a pin is physically
+									touched using <code>pinX.is_touched()</code>.
+								</p>
+								<p>To output a voltage to a pin (turn on), <code>pinX.write_digital(1)</code> will do the trick, while
+									we can read a pin with <code>pinX.read_digital()</code>.</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/15af37506dd0f93f735e7ead6c1c8b11.js"></script>
+							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/radio.html"><code class="code-instructions">Radio</code></a>
+								<p>Radio allows microbits to talk to all their friends! It uses a super simple interface to send and recieve messages between microbits. 
+									You will need to <code>import radio</code> and run <code>radio.on()</code> before your loop but then your good to go. To send a message,
+									it is as simple as <code>radio.send(message)</code> and recieve it with <code>radio.receive()</code>. 
+								</p>
+								<p>We can specify the channel to communicate on walkie-talkie style so if you want to create your own secret messaging system go for it!</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/1e5fe5f8dacd25acad57f2f803ee5ab8.js"></script>
+							</section>
+							<section class="left">
+								<a href="https://microbit-micropython.readthedocs.io/en/latest/music.html"><code class="code-instructions">Music</code></a>
+								<p>We can generate music from the microbit which requires a simple connection to the stereo connector. We simply connect the 
+									ground to the of the cable and the pin connector as seen in the speaker connector diagram if we were to use pin 0.
+								</p>
+								<p>To actually play music once connected is very simple with <code>music.play()</code>You can use pre-built melodies or build your own.
+								There is a lot of functionality I haven't touched on,  <a href="https://microbit-micropython.readthedocs.io/en/latest/music.html">check out the documentation</a> 
+								if your interested in digging in!</p>
+							</section>
+							<section class="right">
+								<script src="https://gist.github.com/swithers19/a1d1cb865380aa654dc712cab36014c3.js"></script>								
+								<h4 id="speaker-txt">Speaker Connection</h4>
+								<img width="80%" src="images/music-pins.png" alt="">
+							</section>
+						
+						</div>
+					</div>
+				</section>
+
+				<!-- Bring It Together -->
+				<section id="bring-it-together" class="wrapper style2 fade-up">
+					<div class="inner">
+						<h2>Bring it Together</h2>
+						<p>We have done some hard yards exploring what the microbit can do, the last piece of content is helping you on your way on how to integrate this functionality.
+							Everything we have covered is fundamentally an input or output (except radio), meaning we are passing the microbit some information, or it is outputting something,
+							be it light, sound or information. A simple project wil fundamentally do the following:
+						</p>
+						<img width="100%" src="images/project.svg" alt="">
+						<p style="text-align: center;">Blend functionality, get experimental and don't be afraidd to break things!</p>
+						<iframe src="https://giphy.com/embed/3o7TKxlVXJsQsDX2og"  style="position: relative; height: 40vh; width: 100%; padding-bottom: 20px;" frameBorder="0" ></iframe>
+					</div>
+				</section>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Sam Withers 2020</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Remixed by Sam Withers</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
